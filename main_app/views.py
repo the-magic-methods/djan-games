@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Game
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 # Create your views here.
@@ -23,3 +23,12 @@ class GameCreate(CreateView):
   model = Game
   fields = '__all__'
   success_url = '/games/'
+
+class GameUpdate(UpdateView):
+    model = Game
+    fields = ["gamename", "platform", "description"]
+
+
+class GameDelete(DeleteView):
+    model = Game
+    success_url = "/games/"
