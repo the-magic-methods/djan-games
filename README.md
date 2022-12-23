@@ -1,9 +1,14 @@
 # **Cool Djan Games**
 
-### ***Use this app to track your games, high scores, game notes and game screenshots***
-&nbsp;
+### ***-Use this app to track your games, high scores, game notes and game screenshots***
+### ***-Play games and automatically track your high scores and compare them to other users in a leaderboard***
 
 ## **Wireframes:**
+
+<img src="images/1.png" alt="drawing" width="500"/>
+<img src="images/2.png" alt="drawing" width="500"/>
+<img src="images/3.png" alt="drawing" width="500"/>
+
 
 
 &nbsp;
