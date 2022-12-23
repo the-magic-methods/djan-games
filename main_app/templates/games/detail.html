@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Game Details</h1>
+<p>this page will display high scores etc</p>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ game.gamename }}</span>
+    <p>Platform: {{ game.platform }}</p>
+    <p>Description: {{ game.description }}</p>
+  </div>
+</div>
+
+{% endblock %}
