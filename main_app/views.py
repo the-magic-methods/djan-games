@@ -35,7 +35,7 @@ def scores_index(request):
 
 class GameCreate(CreateView):
   model = Game
-  fields = ["gamename", "platform", "description"]
+  fields = ['gamename', 'platform', 'description']
   success_url = '/games/'
   def form_valid(self, form):
       # Assign the logged in user (self.request.user)
