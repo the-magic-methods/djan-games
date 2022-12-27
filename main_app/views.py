@@ -1,13 +1,11 @@
-from django.shortcuts import render
-from .models import Game
+from django.shortcuts import render, redirect
+from .models import *
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-
-
-# Create your views here.
+from .forms import ScoreForm
 
 
 # Define the home view
@@ -20,7 +18,20 @@ def games_index(request):
 
 def games_detail(request, game_id):
   game = Game.objects.get(id=game_id)
-  return render(request, 'games/detail.html', { 'game': game })
+  score_form = ScoreForm()
+  return render(request, 'games/detail.html', { 'game': game, 'score_form': score_form })
+
+def add_score(request, game_id):
+  form = ScoreForm(request.POST)
+  if form.is_valid():
+    new_score = form.save(commit=False)
+    new_score.game_id = game_id
+    new_score.save()
+  return redirect('detail', game_id=game_id)
+
+def scores_index(request):
+    games = Game.objects.all()
+    return render(request, 'games/leaderboards.html', { 'games': games })
 
 class GameCreate(CreateView):
   model = Game
@@ -36,7 +47,15 @@ class GameUpdate(UpdateView):
     model = Game
     fields = ["gamename", "platform", "description"]
 
-
 class GameDelete(DeleteView):
     model = Game
     success_url = "/games/"
+
+class ScoreUpdate(UpdateView):
+  model = Score
+  fields = ['value', 'date']
+
+class ScoreDelete(DeleteView):
+  model = Score
+  sucess_url = '/games/'
+

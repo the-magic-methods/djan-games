@@ -8,6 +8,7 @@
   <title>Cool Djan Games</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
   <header class="navbar-fixed">
@@ -18,6 +19,7 @@
         </ul>
         <ul class="right black-text">
   {% if user.is_authenticated %}
+          <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
             <li><a href="{% url 'games_create' %}">Add a Game</a></li>
             <li><a href="{% url 'index' %}">View All My Games</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
