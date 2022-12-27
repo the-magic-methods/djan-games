@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 # Create your views here.
@@ -37,3 +38,11 @@ class GameCreate(CreateView):
  
 
     
+class GameUpdate(UpdateView):
+    model = Game
+    fields = ["gamename", "platform", "description"]
+
+
+class GameDelete(DeleteView):
+    model = Game
+    success_url = "/games/"
