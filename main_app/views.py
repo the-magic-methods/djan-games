@@ -27,15 +27,6 @@ class GameCreate(CreateView):
   fields = '__all__'
   success_url = '/games/'
 
-  # This inherited method is called when a
-  # valid cat form is being submitted
-  def form_valid(self, form):
-    # Assign the logged in user (self.request.user)
-    form.instance.user = self.request.user  # form.instance is the cat
-    # Let the CreateView do its job as usual
-    return super().form_valid(form)
-
- 
 
     
 class GameUpdate(UpdateView):
@@ -46,3 +37,10 @@ class GameUpdate(UpdateView):
 class GameDelete(DeleteView):
     model = Game
     success_url = "/games/"
+    # This inherited method is called when a
+    # valid cat form is being submitted
+    def form_valid(self, form):
+      # Assign the logged in user (self.request.user)
+      form.instance.user = self.request.user  # form.instance is the cat
+      # Let the CreateView do its job as usual
+      return super().form_valid(form)
