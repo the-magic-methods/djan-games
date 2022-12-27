@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Game
 from django.views.generic import ListView
+from django.views.generic.edit import CreateView
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
@@ -24,6 +27,17 @@ class GameCreate(CreateView):
   fields = '__all__'
   success_url = '/games/'
 
+  # This inherited method is called when a
+  # valid cat form is being submitted
+  def form_valid(self, form):
+    # Assign the logged in user (self.request.user)
+    form.instance.user = self.request.user  # form.instance is the cat
+    # Let the CreateView do its job as usual
+    return super().form_valid(form)
+
+ 
+
+    
 class GameUpdate(UpdateView):
     model = Game
     fields = ["gamename", "platform", "description"]
