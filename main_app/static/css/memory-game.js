@@ -73,7 +73,7 @@ function checkWinner() {
       "WE'VE GOT OURSELVES A WINNER! KEEP PLAYING TO EXERCISE YOUR MEMORY MUSCLE..";
     selectedImages = [];
     document.getElementById("container").style.backgroundImage =
-      "url('css/images/hqraceflag.gif')";
+      "url('/static/css/images/hqraceflag.gif')";
     message.style.fontSize = "x-large";
     message.style.color = "red";
     hiddenImages.forEach(function (image) {
@@ -95,14 +95,14 @@ function restartGame() {
     howManyClicks.innerText = 0;
     document.getElementById("container").style.backgroundImage = "";
     message.innerText =
-      "Click a race flag to reveal a car, remember its color and try to make your next race flag click match the previous car's color in 30 or less CLICKS!";
+      "Click a race flag to reveal a car, remember its color and try to make your next race flag click match the previous car's color in 30 or less CLICKS!??";
     message.style.color = "white";
   });
-  images.forEach(function (flag) {
-    flag.style.backgroundImage = "url('css/images/raceflag.png')";
-    flag.style.opacity = "1";
-    flag.style.pointerEvents = "";
-  });
+  // images.forEach(function (flag) {
+  //   flag.style.backgroundImage = "url('{% static '' %}')";
+  //   flag.style.opacity = "1";
+  //   flag.style.pointerEvents = "";
+  // });
   shuffle();
 }
 
