@@ -98,11 +98,11 @@ function restartGame() {
       "Click a race flag to reveal a car, remember its color and try to make your next race flag click match the previous car's color in 30 or less CLICKS!??";
     message.style.color = "white";
   });
-  // images.forEach(function (flag) {
-  //   flag.style.backgroundImage = "url('{% static '' %}')";
-  //   flag.style.opacity = "1";
-  //   flag.style.pointerEvents = "";
-  // });
+  images.forEach(function (flag) {
+    flag.style.backgroundImage = "url('/static/css/images/raceflag.png')";
+    flag.style.opacity = "1";
+    flag.style.pointerEvents = "";
+  });
   shuffle();
 }
 
