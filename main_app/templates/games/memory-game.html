@@ -6,10 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cool Djan Games - YA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'css/memory-game.css' %}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="{% static 'css/memory-game.js' %}"></script>
   </head>
-
+  <header class="navbar-fixed">
+    <nav class="#757575 grey darken-1">
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+            <a href="/" class="left brand-logo">&nbsp;&nbsp;Cool Djan Games</a>
+          </li>
+        </ul>
+        <ul class="right black-text">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
+          <li><a href="{% url 'games_create' %}">Add a Game</a></li>
+          <li><a href="{% url 'index' %}">View All My Games</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Log In</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </header>
   <h1>Wowo111w</h1>
 
   <div class="gameTitle">
@@ -19,13 +41,23 @@
   <div id="container">
     <div class="image">
       <div class="front">
-        <img class="one" data-index="1" src="{% static 'css/images/bluecar-1.jpeg' %}" alt="" />
+        <img
+          class="one"
+          data-index="1"
+          src="{% static 'css/images/bluecar-1.jpeg' %}"
+          alt=""
+        />
       </div>
       <div></div>
     </div>
     <div class="image">
       <div class="front">
-        <img class="one" data-index="1" src="{% static 'css/images/bluecar-2.jpeg' %}" alt="" />
+        <img
+          class="one"
+          data-index="1"
+          src="{% static 'css/images/bluecar-2.jpeg' %}"
+          alt=""
+        />
       </div>
       <div></div>
     </div>
@@ -35,8 +67,9 @@
           class="two"
           data-index="2"
           src="{% static 'css/images/greencar-1.jpeg' %}"
-          alt="" />
-      </div> 
+          alt=""
+        />
+      </div>
       <div></div>
     </div>
     <div class="image">

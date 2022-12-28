@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const raceCardSound = new Audio("css/sounds/racecarsound.wav");
+const raceCardSound = new Audio("/static/css/sounds/racecarsound.wav");
 /*----- state variables -----*/
 
 let playerScore = 0;
