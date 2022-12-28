@@ -33,6 +33,9 @@ def scores_index(request):
     games = Game.objects.all()
     return render(request, 'games/leaderboards.html', { 'games': games })
 
+def memory_game(request):
+    return render(request, 'games/memory-game.html' )
+
 class GameCreate(CreateView):
   model = Game
   fields = ['gamename', 'platform', 'description']

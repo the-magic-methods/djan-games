@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cool Djan Games - YA</title>
+    <link rel="stylesheet" href="{% static 'css/memory-game.css' %}" />
+    <script defer src="{% static 'css/memory-game.js' %}"></script>
+  </head>
+
+  <h1>Wowo111w</h1>
+
+  <div class="gameTitle">
+    <h2>Concentration - Car Color Edition</h2>
+  </div>
+
+  <div id="container">
+    <div class="image">
+      <div class="front">
+        <img class="one" data-index="1" src="{% static 'css/images/bluecar-1.jpeg' %}" alt="" />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img class="one" data-index="1" src="{% static 'css/images/bluecar-2.jpeg' %}" alt="" />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="two"
+          data-index="2"
+          src="{% static 'css/images/greencar-1.jpeg' %}"
+          alt="" />
+      </div> 
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="two"
+          data-index="2"
+          src="{% static 'css/images/greencar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="three"
+          data-index="3"
+          src="{% static 'css/images/orangecar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="three"
+          data-index="3"
+          src="{% static 'css/images/orangecar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="four"
+          data-index="4"
+          src="{% static 'css/images/redcar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="four"
+          data-index="4"
+          src="{% static 'css/images/redcar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="five"
+          data-index="5"
+          src="{% static 'css/images/whitecar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="five"
+          data-index="5"
+          src="{% static 'css/images/whitecar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="six"
+          data-index="6"
+          src="{% static 'css/images/yellowcar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="six"
+          data-index="6"
+          src="{% static 'css/images/yellowcar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="userMessage">
+    Click a race flag to reveal a car, and try to make your next race flag click
+    match the previous car's color in 30 or less CLICKS!
+  </div>
+
+  <h2>
+    <div class="clicks"><span>0</span> Clicks</div>
+  </h2>
+
+  <button id="playButton" onclick="restartGame()">
+    <h2>Restart Game</h2>
+  </button>
+</html>
