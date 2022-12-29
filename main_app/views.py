@@ -33,6 +33,11 @@ def scores_index(request):
     games = Game.objects.all()
     return render(request, 'games/leaderboards.html', { 'games': games })
 
+def profile_page(request):
+  model = User_Info
+  games = Game.objects.all()
+  return render(request, 'main_app/profile.html', { 'games': games })
+
 class GameCreate(CreateView):
   model = Game
   fields = ["gamename", "platform", "description"]

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Profile Page</h1>
+
+</br>
+</br>
+</br>
+<div>Username</div>
+<div class="card grey lighten-4">{{ user_info.username }}</div>
+
+</br>
+<p>Bio:</p>
+<div class="card grey lighten-2 profile_bio">
+    <div class="card-content">
+      <span class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus nisi, feugiat eu blandit et, ullamcorper a lacus. Pellentesque ac nibh mattis, hendrerit justo facilisis, hendrerit sem. In hac habitasse platea dictumst. Donec eget magna id nibh imperdiet commodo. Ut fermentum in nunc non vestibulum. Nam venenatis mauris a sapien sagittis, ut tincidunt nibh rutrum. Curabitur tortor magna, lobortis sed est ut, tincidunt consequat ipsum. Sed tincidunt molestie sapien, sit amet egestas tortor mattis vitae.</span>
+    </div>
+</div>
+
+</br>
+<p>My Highscores</p>
+<table class="profile_scores">
+    <tr>
+        <th>Game</th>
+        <th>Score</th>
+    </tr>
+    {% for game in games %}
+      <div>
+        <div class="black-text">
+            <tr>
+                <td>{{ game.gamename }}</td>
+                <td>{% for score in game.score_set.all %} {{ score.value }} {% endfor %}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </a>
+  </div>
+
+
+{% endblock %}

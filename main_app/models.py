@@ -18,7 +18,7 @@ class Game(models.Model):
 
 class Score(models.Model):
     value = models.PositiveIntegerField()
-    date = models.DateField( default=datetime.date.today)
+    date = models.DateField(default=datetime.date.today)
     Game = Game
 
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
@@ -31,3 +31,8 @@ class Score(models.Model):
 
     def __str__(self):
         return f"{self.value} on {self.date} at {self.id}"
+
+class User_Info(models.Model):
+    username = models.CharField(max_length=100, default="Gamer")
+    bio = models.CharField(max_length=500)
+    score = Score
