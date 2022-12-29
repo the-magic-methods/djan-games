@@ -28,7 +28,3 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-
-.test {
-  color: blue;
-}
