@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Profile Page</h1>
+
+
+<button><a href="{% url 'profile_edit' %}">Edit Info!</a></button>
+
+</br>
+</br>
+</br>
+<div>Username</div>
+    <div class="card grey lighten-4 profile_username">
+        <div class="card-content">
+        <span class="card-title">{{ profile.username }}</span>
+        </div>
+    </div>
+    </br>
+
+    </br>
+    <p>Bio:</p>
+    <div class="card grey lighten-2 profile_bio">
+        <div class="card-content">
+        <span class="card-title">{{ profile.bio }}</span>
+    </div>
+    </div>
+</br>
+<p>My Highscores</p>
+<table class="profile_scores">
+    <tr>
+        <th>Game</th>
+        <th>Score</th>
+    </tr>
+    {% for game in games %}
+      <div>
+        <div class="black-text">
+            <tr>
+                <td>{{ game.gamename }}</td>
+                <td>{{ game.score_set.first }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </a>
+  </div>
+
+
+{% endblock %}
