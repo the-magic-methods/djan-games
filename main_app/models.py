@@ -31,3 +31,16 @@ class Score(models.Model):
 
     def __str__(self):
         return f"{self.value} on {self.date} at {self.id}"
+
+
+class MemoryGameScore(models.Model):
+    score = models.IntegerField()
+    date = models.DateField( default=datetime.date.today)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.score
+
+    def get_absolute_url(self):
+        return reverse('memory-game', kwargs={'game_id': self.id})
+        
