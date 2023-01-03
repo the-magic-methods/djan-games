@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html> /Users/valyriansteel02/code/djangames/main_app/static/css/memory-game.css
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cool Djan Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/memory-game.css' %}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="{% static 'css/memory-game.js' %}"></script>
+  </head>
+  <header class="navbar-fixed">
+    <nav class="#757575 grey darken-1">
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+            <a href="/" class="left brand-logo">&nbsp;&nbsp;Cool Djan Games</a>
+          </li>
+        </ul>
+        <ul class="right black-text">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
+          <li><a href="{% url 'games_create' %}">Add a Game</a></li>
+          <li><a href="{% url 'index' %}">View All My Games</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Log In</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="gameTitle">
+    <h2>Concentration - Car Color Edition</h2>
+  </div>
+
+  <div id="container">
+    <div class="image">
+      <div class="front">
+        <img
+          class="one"
+          data-index="1"
+          src="{% static 'css/images/bluecar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="one"
+          data-index="1"
+          src="{% static 'css/images/bluecar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="two"
+          data-index="2"
+          src="{% static 'css/images/greencar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="two"
+          data-index="2"
+          src="{% static 'css/images/greencar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="three"
+          data-index="3"
+          src="{% static 'css/images/orangecar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="three"
+          data-index="3"
+          src="{% static 'css/images/orangecar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="four"
+          data-index="4"
+          src="{% static 'css/images/redcar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="four"
+          data-index="4"
+          src="{% static 'css/images/redcar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="five"
+          data-index="5"
+          src="{% static 'css/images/whitecar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="five"
+          data-index="5"
+          src="{% static 'css/images/whitecar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="six"
+          data-index="6"
+          src="{% static 'css/images/yellowcar-1.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+    <div class="image">
+      <div class="front">
+        <img
+          class="six"
+          data-index="6"
+          src="{% static 'css/images/yellowcar-2.jpeg' %}"
+          alt=""
+        />
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="userMessage">
+    Click a race flag to reveal a car, and try to make your next race flag click
+    match the previous car's color in 30 or less CLICKS!
+  </div>
+
+  <h2>
+    <div class="clicks"><span>0</span> Clicks</div>
+  </h2>
+
+  <button id="playButton" onclick="restartGame()">
+    <h2>Restart Game</h2>
+  </button>
+
+  <form action="" method="POST">
+    <!-- Django requires the following for security purposes -->
+    {% csrf_token %}
+    <table>
+      <!-- Render the inputs inside of <tr>s & <td>s -->
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit!" class="btn">
+  </form>
+
+
+{% for memorygamescore in memorygamescores %}
+  <div class="card">
+        <div class="card-content black-text">
+            <span class="card-title">{{ memorygamescore.score }}</span>
+    </div>
+    </a>
+  </div>
+
+{% endfor %}
+
+</html>
+
+  
+

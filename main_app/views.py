@@ -54,9 +54,12 @@ def profile_page(request):
   games = Game.objects.all()
   return render(request, 'main_app/profile.html', {  'games': games, 'profile': profile, 'profile_form': profile_form })
 
+def memory_game(request):
+    return render(request, 'games/memory-game.html' )
+
 class GameCreate(CreateView):
   model = Game
-  fields = ["gamename", "platform", "description"]
+  fields = ['gamename', 'platform', 'description']
   success_url = '/games/'
   def form_valid(self, form):
       # Assign the logged in user (self.request.user)
@@ -80,3 +83,12 @@ class ScoreDelete(DeleteView):
   model = Score
   sucess_url = '/games/'
 
+# class MemoryScoreCreate(CreateView):
+#   model = MemoryGameScore
+#   fields = ['score', 'platform', 'description']
+#   success_url = '/games/'
+#   def form_valid(self, form):
+#       # Assign the logged in user (self.request.user)
+#       form.instance.user = self.request.user  # form.instance is the cat
+#       # Let the CreateView do its job as usual
+#       return super().form_valid(form)
