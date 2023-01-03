@@ -80,3 +80,5 @@ class ScoreDelete(DeleteView):
   model = Score
   sucess_url = '/games/'
 
+def Simon_Game(request):
+  return render(request, 'games/Simon_Game.html')
