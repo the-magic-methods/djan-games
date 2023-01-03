@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col s6">
+  <form action="{% url 'update_info' %}" method="POST">
+    {% csrf_token %}
+    {{ profile_form.as_p }}
+    <input type="submit" class="btn" value="Update Info!">
+  </form>
+
+{% endblock %}

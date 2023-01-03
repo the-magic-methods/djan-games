@@ -12,5 +12,12 @@ urlpatterns = [
     path('games/<int:pk>/delete/', views.GameDelete.as_view(), name='games_delete'),
     path('games/<int:game_id>/add_score/', views.add_score, name='add_score'),
     path('games/leaderboard/', views.scores_index, name='leaderboard'),
+<<<<<<< HEAD
     path('games/memory-game/', views.memory_game, name='memory-game'),
+=======
+    path('profile/', views.profile_page, name='profile'),
+    path('profile/edit/', views.profile_update_page, name='profile_edit'),
+    path('profile/edit/info/', views.profile_update_info, name='update_info'),
+    # path('profiel/edit/confirm', views.set_up_profile, name='profile_setup'),
+>>>>>>> dev
 ]

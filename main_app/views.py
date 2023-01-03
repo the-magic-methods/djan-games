@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .forms import ScoreForm
+from .forms import *
 
 
 # Define the home view
@@ -31,7 +31,28 @@ def add_score(request, game_id):
 
 def scores_index(request):
     games = Game.objects.all()
-    return render(request, 'games/leaderboards.html', { 'games': games })
+    score = Score.objects.all()
+    # score_set = 
+    first = Score.objects.first()
+    return render(request, 'games/leaderboards.html', { 'games': games, 'score': score, 'first': first })
+
+def profile_update_page(request):
+  profile = Profile.objects.all()
+  profile_form = ProfileForm()
+  return render(request, 'main_app/profile_edit.html', { 'profile': profile, 'profile_form': profile_form })
+
+def profile_update_info(request):
+  form = ProfileForm(request.POST)
+  if form.is_valid():
+    new_info = form.save(commit=False)
+    new_info.save()
+  return redirect('profile')
+
+def profile_page(request):
+  profile = Profile.objects.last()
+  profile_form = ProfileForm()
+  games = Game.objects.all()
+  return render(request, 'main_app/profile.html', {  'games': games, 'profile': profile, 'profile_form': profile_form })
 
 def memory_game(request):
     return render(request, 'games/memory-game.html' )

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% comment %} {% load index %} {% endcomment %}
 {% block content %}
 
 <h1>User's Highscores</h1>
@@ -13,7 +14,7 @@
         <div class="black-text">
             <tr>
                 <td>{{ game.gamename }}</td>
-                <td>{% for score in game.score_set.all %} {{ score.value }} {% endfor %}</td>
+                <td> {{ game.score_set.first }} </td>
             </tr>
             {% endfor %}
         </table>

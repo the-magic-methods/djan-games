@@ -11,9 +11,7 @@
             <p>Platform: {{ game.platform }}</p>
             <p>Description: {{ game.description }}</p>
             {% comment %} currently showing all scores, figure out how to show most recent score or highest score only {% endcomment %}
-            <p>Score: {% for score in game.score_set.all %}
-                <td>{{score.value}}</td>
-            {% endfor %}</p>
+            <p>Score: {{game.score_set.first}}</p>
     </div>
     </a>
   </div>
