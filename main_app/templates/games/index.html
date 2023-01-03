@@ -10,7 +10,6 @@
             <span class="card-title">{{ game.gamename }}</span>
             <p>Platform: {{ game.platform }}</p>
             <p>Description: {{ game.description }}</p>
-            {% comment %} currently showing all scores, figure out how to show most recent score or highest score only {% endcomment %}
             <p>Score: {{game.score_set.first}}</p>
     </div>
     </a>
