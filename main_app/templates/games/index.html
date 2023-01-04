@@ -1,7 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>User's Games</h1>
+<h4>Play some Games!</h4>
+
+  <div class="card">
+    <a href="{% url 'memory-game' %}">
+        <div class="card-content black-text">
+            <span class="card-title">Concentration</span>
+            <p>Description: Match the cards, this one is car themed!</p>
+        </div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{% url 'simon-game' %}">
+        <div class="card-content black-text">
+            <span class="card-title">Simon</span>
+            <p>Description: Repeat the pattern shown, each level increases the difficulty</p>
+        </div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{% url 'mine-sweeper' %}">
+        <div class="card-content black-text">
+            <span class="card-title">Minesweeper</span>
+            <p>Description: Look for mines, safe spaces will denote how many bombs may be around them</p>
+        </div>
+    </a>
+  </div>
+
+<h4>Game Tracker</h4>
 
 {% for game in games %}
   <div class="card">
@@ -15,10 +44,5 @@
     </a>
   </div>
 {% endfor %}
-
-<h1>Play a Game!</h1>
-
-<li><a href="{% url 'memory-game' %}">Concentration Game</a></li>
-<li><a href="{% url 'Simon-Game' %}">Simon Game</a></li>
 
 {% endblock %}

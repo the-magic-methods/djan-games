@@ -57,6 +57,9 @@ def profile_page(request):
 def memory_game(request):
     return render(request, 'games/memory-game.html' )
 
+def mine_sweeper(request):
+    return render(request, 'games/mine-sweeper.html' )
+
 class GameCreate(CreateView):
   model = Game
   fields = ['gamename', 'platform', 'description']
