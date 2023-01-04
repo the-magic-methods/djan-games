@@ -3,6 +3,8 @@ let isBombsGenerated = false
 let bombBoard = []
 let canClick = true
 let numBombs = 40
+console.log("Test")
+console.log(tiles)
 for (let i = 0; i < 216; i++) {
     bombBoard.push(false)
 }
