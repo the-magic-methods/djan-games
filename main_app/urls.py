@@ -13,10 +13,12 @@ urlpatterns = [
     path('games/<int:game_id>/add_score/', views.add_score, name='add_score'),
     path('games/leaderboard/', views.scores_index, name='leaderboard'),
     path('games/memory-game/', views.memory_game, name='memory-game'),
+    path('games/simon-game/', views.Simon_Game, name='Simon-Game'),
+    path('games/mine-sweeper/', views.mine_sweeper, name='Mine-Sweeper'),
     path('profile/', views.profile_page, name='profile'),
     path('profile/edit/', views.profile_update_page, name='profile_edit'),
     path('profile/edit/info/', views.profile_update_info, name='update_info'),
     path('accounts/signup/', views.signup, name='signup'),
     # path('profiel/edit/confirm', views.set_up_profile, name='profile_setup'),
-    path('games/simon-game/', views.Simon_Game, name='Simon-Game'),
+    
 ]
