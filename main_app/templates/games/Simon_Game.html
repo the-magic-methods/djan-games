@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simon Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="{% static 'css/Simon.css' %}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+  <header class="navbar-fixed">
+    <nav class="#757575 grey darken-1">
+      <div class="nav-wrapper">
+        <ul>
+          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Cool Djan Games</a></li>
+        </ul>
+        <ul class="right black-text">
+  {% if user.is_authenticated %}
+            <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
+            <li><a href="{% url 'games_create' %}">Add a Game</a></li>
+            <li><a href="{% url 'index' %}">View All My Games</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Log In</a></li>
+  {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <h1>Simon</h1>
+    <div>
+        <section class="game-board">
+            <button class="green-space" id="grn"></button>
+            <button class="red-space" id="red"></button>
+            <button class="blue-space" id="blu"></button>
+            <button class="yellow-space" id="ylw"></button>
+            <div class="null">null</div>
+            <div class="explan-text" id="txt">Press the start button in the bottom left to get started! After finishing each level you'll need to press the start button again to play the next level's pattern</div>
+        </section>
+    </div>
+    <button class="start" id="start">Start!</button>
+    <div class="level-counter" id="LC">Level: </div>
+    <div class="" id="win">Nice Job!</div>
+    <div class="" id="loss">ඞ You lose ඞ</div>
+</body>
+<script src="{% static 'css/Simon.js' %}"></script>
+</html>
