@@ -3,7 +3,7 @@ let isBombsGenerated = false
 let bombBoard = []
 let canClick = true
 let numBombs = 40
-console.log("Test")
+console.log("Test2")
 console.log(tiles)
 for (let i = 0; i < 216; i++) {
     bombBoard.push(false)
@@ -13,8 +13,10 @@ tiles.forEach(function (tile) {
 })
 tiles.forEach(function (tile) {
     tile.addEventListener('contextmenu', function (tile) {
-        console.log("clicked")
-        tile.target.className = tile.target.className + " flag"
+        if (tile.classList.contains("flag")) {
+            tile.target.className = tile.target.className + " flag"
+        }
+        console.log(tile.classList)
         console.log(tile.target.className)
     })
 })
@@ -25,7 +27,6 @@ function translater(tile) {
         if (!isBombsGenerated) {
             generateBombs()
         }
-
         if (checkForSuroundingBombs(tile.target)[0] == 0) {
             blankTile(checkForSuroundingBombs(tile.target)[1], checkForSuroundingBombs(tile.target)[2])
         }

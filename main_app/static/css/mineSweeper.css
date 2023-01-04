@@ -25,3 +25,7 @@
 .flag {
     background-color: green;
 }
+
+p {
+    display: inline-block;
+}

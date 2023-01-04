@@ -34,7 +34,7 @@
 </header>
     <h1>MineSweeper (Now with buggy flags!!!)</h1>
     <h2 id="win"></h2>
-    <div class="board">
+    <div class="board" oncontextmenu="return false">
         <div class="row1">
             <div class="box col1 row1"></div>
             <div class="box col2 row1"></div>
@@ -278,6 +278,7 @@
     </div>
 
 
+<p class ="timer">0</p>
 
 <input type="button" value="Restart Game" onClick="window.location.reload(true)">
 </body>
