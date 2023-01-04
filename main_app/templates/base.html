@@ -21,13 +21,8 @@
         <ul class="right black-text">
   {% if user.is_authenticated %}
             <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
-<<<<<<< HEAD
             <li><a href="{% url 'games_create' %}">Add a Game to Track</a></li>
-            <li><a href="{% url 'index' %}">View All My Games</a></li>
-=======
-            <li><a href="{% url 'games_create' %}">Add a Game</a></li>
             <li><a href="{% url 'index' %}">Game List</a></li>
->>>>>>> dev
             <li><a href="{% url 'profile' %}">Profile</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}

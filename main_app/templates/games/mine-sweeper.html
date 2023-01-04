@@ -12,26 +12,27 @@
   <script defer src="{% static 'css/mineSweeper.js' %}"></script>
 </head>
 <body>
-  <header class="navbar-fixed">
-    <nav class="#757575 grey darken-1">
-      <div class="nav-wrapper">
-        <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Cool Djan Games</a></li>
-        </ul>
-        <ul class="right black-text">
-  {% if user.is_authenticated %}
-            <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
-            <li><a href="{% url 'games_create' %}">Add a Game</a></li>
-            <li><a href="{% url 'index' %}">Game List</a></li>
-            <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="{% url 'logout' %}">Log Out</a></li>
-            {% else %}
-            <li><a href="{% url 'login' %}">Log In</a></li>
-  {% endif %}
-        </ul>
-      </div>
-    </nav>
-</header>
+    <header class="navbar-fixed">
+        <nav class="#757575 grey darken-1">
+          <div class="nav-wrapper">
+            <ul>
+              <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Cool Djan Games</a></li>
+            </ul>
+            <ul class="right black-text">
+      {% if user.is_authenticated %}
+                <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
+                <li><a href="{% url 'games_create' %}">Add a Game to Track</a></li>
+                <li><a href="{% url 'index' %}">Game List</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% else %}
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}">Log In</a></li>
+      {% endif %}
+            </ul>
+          </div>
+        </nav>
+      </header>
     <h1>MineSweeper (Now with buggy flags!!!)</h1>
     <h2 id="win"></h2>
     <div class="board">
