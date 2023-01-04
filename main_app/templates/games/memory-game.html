@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cool Djan Games</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/memory-game.css' %}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="{% static 'css/memory-game.js' %}"></script>
@@ -183,29 +186,4 @@
   <button id="playButton" onclick="restartGame()">
     <h2>Restart Game</h2>
   </button>
-
-  <form action="" method="POST">
-    <!-- Django requires the following for security purposes -->
-    {% csrf_token %}
-    <table>
-      <!-- Render the inputs inside of <tr>s & <td>s -->
-      {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit!" class="btn">
-  </form>
-
-
-{% for memorygamescore in memorygamescores %}
-  <div class="card">
-        <div class="card-content black-text">
-            <span class="card-title">{{ memorygamescore.score }}</span>
-    </div>
-    </a>
-  </div>
-
-{% endfor %}
-
 </html>
-
-  
-
