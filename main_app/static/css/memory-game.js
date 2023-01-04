@@ -1,7 +1,7 @@
 /*----- constants -----*/
 const raceCardSound = new Audio("/static/css/sounds/racecarsound.wav");
 /*----- state variables -----*/
-
+console.log("connectedd")
 let playerScore = 0;
 let clickCounter = 0;
 let selectedImages = [];
