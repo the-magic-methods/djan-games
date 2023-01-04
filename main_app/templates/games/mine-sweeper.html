@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="{% static 'css/mineSweeper.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/mineSweeper.css' %}" />
+    <title>MineSweeper</title>
+</head>
+
+<body>
+
+    <h1>MineSweeper (Now with buggy flags!!!)</h1>
+    <h2 id="win"></h2>
+    <div class="board">
+        <div class="row1">
+            <div class="box col1 row1"></div>
+            <div class="box col2 row1"></div>
+            <div class="box col3 row1"></div>
+            <div class="box col4 row1"></div>
+            <div class="box col5 row1"></div>
+            <div class="box col6 row1"></div>
+            <div class="box col7 row1"></div>
+            <div class="box col8 row1"></div>
+            <div class="box col9 row1"></div>
+            <div class="box col10 row1"></div>
+            <div class="box col11 row1"></div>
+            <div class="box col12 row1"></div>
+            <div class="box col13 row1"></div>
+            <div class="box col14 row1"></div>
+            <div class="box col15 row1"></div>
+            <div class="box col16 row1"></div>
+            <div class="box col17 row1"></div>
+            <div class="box col18 row1"></div>
+        </div>
+        <div class="row2">
+            <div class="box col1 row2"></div>
+            <div class="box col2 row2"></div>
+            <div class="box col3 row2"></div>
+            <div class="box col4 row2"></div>
+            <div class="box col5 row2"></div>
+            <div class="box col6 row2"></div>
+            <div class="box col7 row2"></div>
+            <div class="box col8 row2"></div>
+            <div class="box col9 row2"></div>
+            <div class="box col10 row2"></div>
+            <div class="box col11 row2"></div>
+            <div class="box col12 row2"></div>
+            <div class="box col13 row2"></div>
+            <div class="box col14 row2"></div>
+            <div class="box col15 row2"></div>
+            <div class="box col16 row2"></div>
+            <div class="box col17 row2"></div>
+            <div class="box col18 row2"></div>
+        </div>
+        <div class="row3">
+            <div class="box col1 row3"></div>
+            <div class="box col2 row3"></div>
+            <div class="box col3 row3"></div>
+            <div class="box col4 row3"></div>
+            <div class="box col5 row3"></div>
+            <div class="box col6 row3"></div>
+            <div class="box col7 row3"></div>
+            <div class="box col8 row3"></div>
+            <div class="box col9 row3"></div>
+            <div class="box col10 row3"></div>
+            <div class="box col11 row3"></div>
+            <div class="box col12 row3"></div>
+            <div class="box col13 row3"></div>
+            <div class="box col14 row3"></div>
+            <div class="box col15 row3"></div>
+            <div class="box col16 row3"></div>
+            <div class="box col17 row3"></div>
+            <div class="box col18 row3"></div>
+        </div>
+        <div class="row4">
+            <div class="box col1 row4"></div>
+            <div class="box col2 row4"></div>
+            <div class="box col3 row4"></div>
+            <div class="box col4 row4"></div>
+            <div class="box col5 row4"></div>
+            <div class="box col6 row4"></div>
+            <div class="box col7 row4"></div>
+            <div class="box col8 row4"></div>
+            <div class="box col9 row4"></div>
+            <div class="box col10 row4"></div>
+            <div class="box col11 row4"></div>
+            <div class="box col12 row4"></div>
+            <div class="box col13 row4"></div>
+            <div class="box col14 row4"></div>
+            <div class="box col15 row4"></div>
+            <div class="box col16 row4"></div>
+            <div class="box col17 row4"></div>
+            <div class="box col18 row4"></div>
+        </div>
+        <div class="row5">
+            <div class="box col1 row5"></div>
+            <div class="box col2 row5"></div>
+            <div class="box col3 row5"></div>
+            <div class="box col4 row5"></div>
+            <div class="box col5 row5"></div>
+            <div class="box col6 row5"></div>
+            <div class="box col7 row5"></div>
+            <div class="box col8 row5"></div>
+            <div class="box col9 row5"></div>
+            <div class="box col10 row5"></div>
+            <div class="box col11 row5"></div>
+            <div class="box col12 row5"></div>
+            <div class="box col13 row5"></div>
+            <div class="box col14 row5"></div>
+            <div class="box col15 row5"></div>
+            <div class="box col16 row5"></div>
+            <div class="box col17 row5"></div>
+            <div class="box col18 row5"></div>
+        </div>
+        <div class="row6">
+            <div class="box col1 row6"></div>
+            <div class="box col2 row6"></div>
+            <div class="box col3 row6"></div>
+            <div class="box col4 row6"></div>
+            <div class="box col5 row6"></div>
+            <div class="box col6 row6"></div>
+            <div class="box col7 row6"></div>
+            <div class="box col8 row6"></div>
+            <div class="box col9 row6"></div>
+            <div class="box col10 row6"></div>
+            <div class="box col11 row6"></div>
+            <div class="box col12 row6"></div>
+            <div class="box col13 row6"></div>
+            <div class="box col14 row6"></div>
+            <div class="box col15 row6"></div>
+            <div class="box col16 row6"></div>
+            <div class="box col17 row6"></div>
+            <div class="box col18 row6"></div>
+        </div>
+        <div class="row7">
+            <div class="box col1 row7"></div>
+            <div class="box col2 row7"></div>
+            <div class="box col3 row7"></div>
+            <div class="box col4 row7"></div>
+            <div class="box col5 row7"></div>
+            <div class="box col6 row7"></div>
+            <div class="box col7 row7"></div>
+            <div class="box col8 row7"></div>
+            <div class="box col9 row7"></div>
+            <div class="box col10 row7"></div>
+            <div class="box col11 row7"></div>
+            <div class="box col12 row7"></div>
+            <div class="box col13 row7"></div>
+            <div class="box col14 row7"></div>
+            <div class="box col15 row7"></div>
+            <div class="box col16 row7"></div>
+            <div class="box col17 row7"></div>
+            <div class="box col18 row7"></div>
+        </div>
+        <div class="row8">
+            <div class="box col1 row8"></div>
+            <div class="box col2 row8"></div>
+            <div class="box col3 row8"></div>
+            <div class="box col4 row8"></div>
+            <div class="box col5 row8"></div>
+            <div class="box col6 row8"></div>
+            <div class="box col7 row8"></div>
+            <div class="box col8 row8"></div>
+            <div class="box col9 row8"></div>
+            <div class="box col10 row8"></div>
+            <div class="box col11 row8"></div>
+            <div class="box col12 row8"></div>
+            <div class="box col13 row8"></div>
+            <div class="box col14 row8"></div>
+            <div class="box col15 row8"></div>
+            <div class="box col16 row8"></div>
+            <div class="box col17 row8"></div>
+            <div class="box col18 row8"></div>
+        </div>
+        <div class="row9">
+            <div class="box col1 row9"></div>
+            <div class="box col2 row9"></div>
+            <div class="box col3 row9"></div>
+            <div class="box col4 row9"></div>
+            <div class="box col5 row9"></div>
+            <div class="box col6 row9"></div>
+            <div class="box col7 row9"></div>
+            <div class="box col8 row9"></div>
+            <div class="box col9 row9"></div>
+            <div class="box col10 row9"></div>
+            <div class="box col11 row9"></div>
+            <div class="box col12 row9"></div>
+            <div class="box col13 row9"></div>
+            <div class="box col14 row9"></div>
+            <div class="box col15 row9"></div>
+            <div class="box col16 row9"></div>
+            <div class="box col17 row9"></div>
+            <div class="box col18 row9"></div>
+        </div>
+        <div class="row10">
+            <div class="box col1 row10"></div>
+            <div class="box col2 row10"></div>
+            <div class="box col3 row10"></div>
+            <div class="box col4 row10"></div>
+            <div class="box col5 row10"></div>
+            <div class="box col6 row10"></div>
+            <div class="box col7 row10"></div>
+            <div class="box col8 row10"></div>
+            <div class="box col9 row10"></div>
+            <div class="box col10 row10"></div>
+            <div class="box col11 row10"></div>
+            <div class="box col12 row10"></div>
+            <div class="box col13 row10"></div>
+            <div class="box col14 row10"></div>
+            <div class="box col15 row10"></div>
+            <div class="box col16 row10"></div>
+            <div class="box col17 row10"></div>
+            <div class="box col18 row10"></div>
+        </div>
+        <div class="row11">
+            <div class="box col1 row11"></div>
+            <div class="box col2 row11"></div>
+            <div class="box col3 row11"></div>
+            <div class="box col4 row11"></div>
+            <div class="box col5 row11"></div>
+            <div class="box col6 row11"></div>
+            <div class="box col7 row11"></div>
+            <div class="box col8 row11"></div>
+            <div class="box col9 row11"></div>
+            <div class="box col10 row11"></div>
+            <div class="box col11 row11"></div>
+            <div class="box col12 row11"></div>
+            <div class="box col13 row11"></div>
+            <div class="box col14 row11"></div>
+            <div class="box col15 row11"></div>
+            <div class="box col16 row11"></div>
+            <div class="box col17 row11"></div>
+            <div class="box col18 row11"></div>
+        </div>
+        <div class="row12">
+            <div class="box col1 row12"></div>
+            <div class="box col2 row12"></div>
+            <div class="box col3 row12"></div>
+            <div class="box col4 row12"></div>
+            <div class="box col5 row12"></div>
+            <div class="box col6 row12"></div>
+            <div class="box col7 row12"></div>
+            <div class="box col8 row12"></div>
+            <div class="box col9 row12"></div>
+            <div class="box col10 row12"></div>
+            <div class="box col11 row12"></div>
+            <div class="box col12 row12"></div>
+            <div class="box col13 row12"></div>
+            <div class="box col14 row12"></div>
+            <div class="box col15 row12"></div>
+            <div class="box col16 row12"></div>
+            <div class="box col17 row12"></div>
+            <div class="box col18 row12"></div>
+        </div>
+    </div>
+</body>
+
+
+<input type="button" value="Restart Game" onClick="window.location.reload(true)">
+</body>
+
+</html>
