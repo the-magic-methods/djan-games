@@ -5,13 +5,13 @@
 <h1>Profile Page</h1>
 
 
-<button><a href="{% url 'profile_edit' %}">Edit Info!</a></button>
+<button class="black"><a href="{% url 'profile_edit' %}" class="profile_edit">Edit Info!</a></button>
 
 </br>
 </br>
 </br>
 <div>Username</div>
-    <div class="card grey lighten-4 profile_username">
+    <div class="card grey darken-3 profile_username">
         <div class="card-content">
         <span class="card-title">{{ profile.username }}</span>
         </div>
@@ -20,7 +20,7 @@
 
     </br>
     <p>Bio:</p>
-    <div class="card grey lighten-2 profile_bio">
+    <div class="card grey darken-3 profile_bio">
         <div class="card-content">
         <span class="card-title">{{ profile.bio }}</span>
     </div>
