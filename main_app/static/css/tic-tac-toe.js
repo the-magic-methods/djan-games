@@ -34,7 +34,7 @@ const boxClicked = (e) => {
         e.target.innerText = currentPlayer;
 
         if(playerHasWon()){
-            playText.innerText = '${currentPlayer} has won!';
+            playText.innerText = 'Winner!';
             return;
         }
         currentPlayer = currentPlayer == O_TEXT ? X_TEXT : O_TEXT;
@@ -87,7 +87,7 @@ const restart = () => {
     boxes.forEach((box) => {
         box.innerText = '';
     });
-    playText.innerText = 'Lets Play!';
+    playText.innerText = 'Tic Tac Toe';
     currentPlayer = O_TEXT;
 };
 

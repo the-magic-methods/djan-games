@@ -1,8 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    color: purple;
-    font-family: sans-serif;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: #030829;
 }
 
 * {
@@ -16,7 +17,7 @@ h1 {
 
 .container {
     padding: 40px;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +38,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: purple;
+    color: white;
     font-size: 100px;
 }
 

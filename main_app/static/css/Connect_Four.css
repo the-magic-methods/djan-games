@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
 .grid {
     border: 6px solid whitesmoke;
     height: 800px;
@@ -29,16 +34,16 @@
 
   h1{
     text-align: center;
-    font-family: Chalkduster, fantasy;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     color: whitesmoke;
   }
 
   h3{
     text-align: center;
-    font-family: Chalkduster, fantasy;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     color: whitesmoke;
   }
 
   body{
-    background-color: rgb(10, 54, 10);
+    background-color: #030829;
   }

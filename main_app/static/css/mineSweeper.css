@@ -8,13 +8,17 @@ h1 {
     color: white;
 }
 
+h2{
+    color: white;
+}
+
 .box {
     width: 30px;
     height: 30px;
     border: 1px solid black;
     display: inline-block;
     margin: -2px;
-    background-color: #EFCB68;
+    background-color: rgb(185, 185, 185);
 }
 
 .box {
@@ -27,7 +31,7 @@ h1 {
 }
 
 .opened {
-    background-color: gray;
+    background-color: rgb(86, 86, 86);
 }
 
 /* .bomb {} */
