@@ -19,7 +19,7 @@
   <form action="{% url 'add_score' game.id %}" method="POST">
     {% csrf_token %}
     {{ score_form.as_p }}
-    <input type="submit" class="btn" value="Add Score">
+    <input type="submit" class="button black" value="Add Score">
   </form>
   <table class="striped">
     <thead>
