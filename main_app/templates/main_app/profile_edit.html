@@ -6,7 +6,7 @@
   <form action="{% url 'update_info' %}" method="POST">
     {% csrf_token %}
     {{ profile_form.as_p }}
-    <input type="submit" class="btn" value="Update Info!">
+    <input type="submit" class="button black" value="Update Info!">
   </form>
 
 {% endblock %}

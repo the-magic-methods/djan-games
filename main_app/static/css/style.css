@@ -59,6 +59,7 @@ textarea:focus, input:focus {
 
 .btn {
   background: black;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .btn:hover {
