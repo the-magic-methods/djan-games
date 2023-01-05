@@ -1,10 +1,11 @@
 * {
-    font-family: Helvetica;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 0px;
 }
 
 body {
-    background-image: url("Images/Background.jpeg");
+    /* background-image: url("Images/Background.jpeg"); */
+    background-color: #030829;
     background-size: cover;
 }
 
@@ -87,7 +88,7 @@ h1 {
 }
 
 .start {
-    margin: 2% 0px 2% 26%;
+    margin: 2% 0px 2% 30%;
     font-size: 20px;
     background-color: black;
     color: white;

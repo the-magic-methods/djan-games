@@ -1,3 +1,13 @@
+body {
+    background-color: #030829;
+    background-size: cover;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h1 {
+    color: white;
+}
+
 .box {
     width: 30px;
     height: 30px;
@@ -20,7 +30,7 @@
     background-color: gray;
 }
 
-.bomb {}
+/* .bomb {} */
 
 .flag {
     background-color: green;
