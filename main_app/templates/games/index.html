@@ -30,6 +30,24 @@
     </a>
   </div>
 
+  <div class="card grey darken-3">
+    <a href="{% url 'Connect-Four' %}">
+        <div class="card-content white-text">
+            <span class="card-title">Connect-Four</span>
+            <p>Description: Just like tic-tac-toe, but with more moves using two colors</p>
+        </div>
+    </a>
+  </div>
+
+  <div class="card grey darken-3">
+    <a href="{% url 'tic-game' %}">
+        <div class="card-content white-text">
+            <span class="card-title">Tic Tac Toe</span>
+            <p>Description: Standard Tic Tac Toe game, no explanation needed</p>
+        </div>
+    </a>
+  </div>
+
 <h4>Game Tracker</h4>
 
 {% for game in games %}
