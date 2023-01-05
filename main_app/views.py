@@ -84,7 +84,7 @@ class ScoreUpdate(UpdateView):
 
 class ScoreDelete(DeleteView):
   model = Score
-  sucess_url = '/games/'
+  success_url = '/games/'
 
 def signup(request):
   error_message = ''
@@ -107,14 +107,3 @@ def signup(request):
 
 def Simon_Game(request):
   return render(request, 'games/Simon_Game.html')
-
-# class MemoryScoreCreate(CreateView):
-#   model = MemoryGameScore
-#   fields = ['score', 'platform', 'description']
-#   success_url = '/games/'
-#   def form_valid(self, form):
-#       # Assign the logged in user (self.request.user)
-#       form.instance.user = self.request.user  # form.instance is the cat
-#       # Let the CreateView do its job as usual
-#       return super().form_valid(form)
-
