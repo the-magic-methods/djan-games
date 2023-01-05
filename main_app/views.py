@@ -105,6 +105,8 @@ def signup(request):
 def Simon_Game(request):
   return render(request, 'games/Simon_Game.html')
 
+def Tic_Game(request):
+  return render(request, 'games/Tic_Game.html')
 # class MemoryScoreCreate(CreateView):
 #   model = MemoryGameScore
 #   fields = ['score', 'platform', 'description']
