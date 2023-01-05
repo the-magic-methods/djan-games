@@ -90,6 +90,7 @@ h1 {
 .start {
     margin: 2% 0px 2% 30%;
     font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     background-color: black;
     color: white;
     cursor: pointer;
