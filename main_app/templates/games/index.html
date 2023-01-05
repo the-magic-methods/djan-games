@@ -3,27 +3,27 @@
 
 <h4>Play some Games!</h4>
 
-  <div class="card">
+  <div class="card grey darken-3">
     <a href="{% url 'memory-game' %}">
-        <div class="card-content black-text">
+        <div class="card-content white-text">
             <span class="card-title">Concentration</span>
             <p>Description: Match the cards, this one is car themed!</p>
         </div>
     </a>
   </div>
 
-  <div class="card">
+  <div class="card grey darken-3">
     <a href="{% url 'simon-game' %}">
-        <div class="card-content black-text">
+        <div class="card-content white-text">
             <span class="card-title">Simon</span>
             <p>Description: Repeat the pattern shown, each level increases the difficulty</p>
         </div>
     </a>
   </div>
 
-  <div class="card">
+  <div class="card grey darken-3">
     <a href="{% url 'mine-sweeper' %}">
-        <div class="card-content black-text">
+        <div class="card-content white-text">
             <span class="card-title">Minesweeper</span>
             <p>Description: Look for mines, safe spaces will denote how many bombs may be around them</p>
         </div>
@@ -51,9 +51,9 @@
 <h4>Game Tracker</h4>
 
 {% for game in games %}
-  <div class="card">
+  <div class="card grey darken-3">
     <a href="{% url 'detail' game.id %}">
-        <div class="card-content black-text">
+        <div class="card-content white-text">
             <span class="card-title">{{ game.gamename }}</span>
             <p>Platform: {{ game.platform }}</p>
             <p>Description: {{ game.description }}</p>

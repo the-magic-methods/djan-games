@@ -1,7 +1,13 @@
+* {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #030829;
+    color: white;
   }
   
   main {
@@ -25,6 +31,36 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+a {
+  color: white;
+}
+
+td {
+  background-color: #030829;
+  color: white;
+}
+
+input, select, textarea{
+  color: white;
+}
+
+textarea:focus, input:focus {
+  color: white;
+}
+
+.gamedetail {
+  color: white;
+}
+
+
+.gamecreate {
+  color: white;
+}
+
+.btn {
+  background: black;
+}
+
+.btn:hover {
+  background: #121212;
 }
