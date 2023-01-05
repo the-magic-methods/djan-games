@@ -3,6 +3,7 @@ let isBombsGenerated = false
 let bombBoard = []
 let canClick = true
 let numBombs = 40
+console.log(tiles)
 for (let i = 0; i < 216; i++) {
     bombBoard.push(false)
 }
@@ -16,6 +17,7 @@ tiles.forEach(function (tile) {
         } else {
             tile.target.className = tile.target.className.replace('flag', '')
         }
+        console.log(tile.target.textContent)
     })
 })
 
@@ -29,7 +31,7 @@ function clickTile(tile) {
             })
             win(false)
         } else {
-            if (!tile.target.classList.contains("opened")) {
+            if (!tile.target.classList.contains("opened") && !tile.target.classList.contains("flag")) {
                 tile.target.className = tile.target.className + " opened"
                 checkForSuroundingBombs(tile.target)
                 if (tile.target.textContent == "") {
@@ -61,10 +63,15 @@ function clickSourounding(tile, repeat) {
                 const colClass = "col" + colNum
                 let checkedTile = document.getElementsByClassName(rowClass + " " + colClass)
                 checkForSuroundingBombs(checkedTile[0])
-                if (repeat && checkedTile[0].textContent == "" && !checkedTile[0].classList.contains("opened")) {
+                if (!checkedTile[0].classList.contains("opened") && !checkedTile[0].classList.contains("flag")) {
                     checkedTile[0].className = checkedTile[0].className + " opened"
+                }
+                if (repeat && checkedTile[0].textContent == "" && !checkedTile[0].classList.contains("opened")) {
                     clickSourounding(checkedTile[0], true)
                 }
+                // if (checkForSuroundingBombs(checkedTile[0])[0] == 0 && !checkedTile[0].classList.contains("opened")) {
+                //     blankTile(rowNum, colNum)
+                // }
             }
         }
     }
