@@ -19,5 +19,5 @@ urlpatterns = [
     path('accounts/signup/', views.signup, name='signup'),
     # path('profiel/edit/confirm', views.set_up_profile, name='profile_setup'),
     path('games/simon-game/', views.Simon_Game, name='Simon-Game'),
-    path('games/tic-tac-toe/', views.Tic_Game, name='Tic-Game'),
+    path('games/connect-four/', views.Connect_Four, name='Connect-Four'),
 ]

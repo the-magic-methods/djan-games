@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cool Djan Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/Connect_Four.css' %}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="{% static 'css/Connect_Four.js' %}"></script>
+  </head>
+  <header class="navbar-fixed">
+    <nav class="#757575 grey darken-1">
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+            <a href="/" class="left brand-logo">&nbsp;&nbsp;Cool Djan Games</a>
+          </li>
+        </ul>
+        <ul class="right black-text">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
+          <li><a href="{% url 'games_create' %}">Add a Game</a></li>
+          <li><a href="{% url 'index' %}">View All My Games</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Log In</a></li>
+          {% endif %}
+        </head>
+        <body>
+            <h1>CONNECT FOUR</h1>
+            <h3>The current Player is: Player <span id="current-player">1</span></h3>
+          <h3 id="result"></h3>
+        
+          <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+          </div>
+            
+         
+            
+        </body>
+        </html>
