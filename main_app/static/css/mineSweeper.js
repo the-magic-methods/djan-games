@@ -3,8 +3,6 @@ let isBombsGenerated = false
 let bombBoard = []
 let canClick = true
 let numBombs = 40
-console.log("Test3")
-console.log(tiles)
 for (let i = 0; i < 216; i++) {
     bombBoard.push(false)
 }
@@ -18,7 +16,6 @@ tiles.forEach(function (tile) {
         } else {
             tile.target.className = tile.target.className.replace('flag', '')
         }
-        console.log(tile.target.textContent)
     })
 })
 
@@ -47,6 +44,7 @@ function clickTile(tile) {
             // checkForSuroundingBombs(tile)
         }
     }
+    isGameOver()
 }
 
 function clickSourounding(tile, repeat) {
@@ -63,15 +61,10 @@ function clickSourounding(tile, repeat) {
                 const colClass = "col" + colNum
                 let checkedTile = document.getElementsByClassName(rowClass + " " + colClass)
                 checkForSuroundingBombs(checkedTile[0])
-                if (!checkedTile[0].classList.contains("opened")) {
-                    checkedTile[0].className = checkedTile[0].className + " opened"
-                }
                 if (repeat && checkedTile[0].textContent == "" && !checkedTile[0].classList.contains("opened")) {
+                    checkedTile[0].className = checkedTile[0].className + " opened"
                     clickSourounding(checkedTile[0], true)
                 }
-                // if (checkForSuroundingBombs(checkedTile[0])[0] == 0 && !checkedTile[0].classList.contains("opened")) {
-                //     blankTile(rowNum, colNum)
-                // }
             }
         }
     }
