@@ -19,6 +19,4 @@ urlpatterns = [
     path('profile/edit/', views.profile_update_page, name='profile_edit'),
     path('profile/edit/info/', views.profile_update_info, name='update_info'),
     path('accounts/signup/', views.signup, name='signup'),
-    # path('profiel/edit/confirm', views.set_up_profile, name='profile_setup'),
-    
 ]
