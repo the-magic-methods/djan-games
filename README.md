@@ -2,6 +2,12 @@
 
 ### ***Cool Djan Games is a throwback to Cool Math Games! In our version, you will be able to play javascript based games, and in addition you will be able to track high scores from any of your favorites games***
 
+## **Team:**
+- Ronne Puzon
+- Sam Wing
+- Anthony Marra
+- Cristiaan Holeman
+
 ## **Wireframes:**
 
 ![](./main_app/static/css/Images/1.png)
@@ -20,7 +26,6 @@
 ![](./main_app/static/css/Images/dgleaderboard.jpg)
 
 
-
 &nbsp;
 ## **ERD Model:**
 ![](./main_app/static/css/Images/erd.jpg)
@@ -34,10 +39,12 @@
 &nbsp;
 ## **Getting Started:**
 &nbsp;
-Link to the game: https://shielded-spire-28536.herokuapp.com/
+Link to the game: https://cool-djan-games.herokuapp.com/
 &nbsp;
 ## **Future Enhancements:**
-- ability to see other signed up users' high scores
-- ability to add high score directly from playable games
-- A.I. logic for tic tac toe
+- add ability to see other signed up users' high scores in a leaderboard
+- add ability to add high score directly from playable games
+- add A.I. logic for tic tac toe
+- add ability to upload profile pictures
+- add ability to upload game screenshots in game tracker
 
