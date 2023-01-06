@@ -128,7 +128,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
 LOGIN_REDIRECT_URL = '/games/'
 LOGOUT_REDIRECT_URL = '/'
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
