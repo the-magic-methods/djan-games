@@ -1,6 +1,6 @@
 # **Cool Djan Games**
 
-### ***-Cool Djan Games was inspired by Cool Math Games. In our version, you will be able to play games, and in addition you will be able to track high scores from any of your favorites games***
+### ***Cool Djan Games is a throwback to Cool Math Games! In our version, you will be able to play javascript based games, and in addition you will be able to track high scores from any of your favorites games***
 
 ## **Wireframes:**
 
