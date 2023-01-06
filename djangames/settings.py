@@ -129,7 +129,9 @@ STATIC_URL = "/static/"
 LOGIN_REDIRECT_URL = '/games/'
 LOGOUT_REDIRECT_URL = '/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
