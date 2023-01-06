@@ -1,0 +1,45 @@
+body {
+    background-color: #030829;
+    background-size: cover;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h1 {
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: -2px;
+    background-color: rgb(185, 185, 185);
+}
+
+.box {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.board {
+    margin: 50px;
+}
+
+.opened {
+    background-color: rgb(86, 86, 86);
+}
+
+/* .bomb {} */
+
+.flag {
+    background-color: green;
+}
+
+.button {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}

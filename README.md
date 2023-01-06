@@ -4,27 +4,26 @@
 
 ## **Wireframes:**
 
-<img src="./main_app/static/css/images/1.png" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/2.png" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/3.png" alt="drawing" width="500"/>
+![](./main_app/static/css/Images/1.png)
+![](./main_app/static/css/Images/2.png)
+![](./main_app/static/css/Images/3.png)
 
 ## **Actual Screenshots:**
 
-<img src="./main_app/static/css/images/djsignup.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/djlogin.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/dgindex.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/dgaddgame.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/dggamedeets.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/dggamesample.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/dgprofile.jpg" alt="drawing" width="500"/>
-<img src="./main_app/static/css/images/dgleaderboard.jpg" alt="drawing" width="500"/>
-
+![](./main_app/static/css/Images/djsignup.jpg)
+![](./main_app/static/css/Images/djlogin.jpg)
+![](./main_app/static/css/Images/dgindex.jpg)
+![](./main_app/static/css/Images/dgaddgame.jpg)
+![](./main_app/static/css/Images/dggamedeets.jpg)
+![](./main_app/static/css/Images/dggamesample.jpg)
+![](./main_app/static/css/Images/dgprofile.jpg)
+![](./main_app/static/css/Images/dgleaderboard.jpg)
 
 
 
 &nbsp;
 ## **ERD Model:**
-<img src="./main_app/static/css/images/erd.jpg" alt="drawing" width="500"/>
+![](./main_app/static/css/Images/erd.jpg)
 
 ## **Technologies Used:**
 - HTML
