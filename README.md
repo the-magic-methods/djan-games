@@ -24,6 +24,7 @@
 
 &nbsp;
 ## **ERD Model:**
+<img src="./main_app/static/css/images/erd.jpg" alt="drawing" width="500"/>
 
 ## **Technologies Used:**
 - HTML
@@ -34,12 +35,10 @@
 &nbsp;
 ## **Getting Started:**
 &nbsp;
-Link to the game: 
+Link to the game: https://shielded-spire-28536.herokuapp.com/
 &nbsp;
-## **Next Steps:**
-&nbsp;
-Future Enhancements will include:<br>
--ability to see other signed up users' high scores
--ability to add high score directly from playable games
--A.I. logic for tic tac toe
+## **Future Enhancements:**
+- ability to see other signed up users' high scores
+- ability to add high score directly from playable games
+- A.I. logic for tic tac toe
 
