@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+import os
+import environ
+
+environ.Env()
+environ.Env.read_env()
 
 # Application definition
 
@@ -77,7 +82,11 @@ WSGI_APPLICATION = "djangames.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangames',
+        'NAME': os.environ["DATABASE_NAME"],
+        'USER': os.environ["DATABASE_NAME"],
+        'PASSWORD': os.environ["DATABASE_PASSWORD"],
+        'HOST': os.environ["DATABASE_HOST"],
+        'PORT': 5432
     }
 }
 
@@ -122,3 +131,6 @@ LOGOUT_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+import django_on_heroku
+django_on_heroku.settings(locals())
