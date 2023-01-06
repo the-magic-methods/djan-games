@@ -27,6 +27,9 @@
 
 
 &nbsp;
+## **Trello Board:**
+https://trello.com/b/vA6HTwy2/cool-djangames
+&nbsp;
 ## **ERD Model:**
 ![](./main_app/static/css/Images/erd.jpg)
 
