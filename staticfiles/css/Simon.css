@@ -1,0 +1,189 @@
+* {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 0px;
+}
+
+body {
+    /* background-image: url("Images/Background.jpeg"); */
+    background-color: #030829;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+.explan-text {
+    background: black;
+    font-size: 16px;
+    width: 200px;
+    margin-left: 60%;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+    color: white;
+}
+
+.null {
+    width: 200px;
+    position: right;
+    float: right;
+    color: white;
+}
+
+.game-board {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "nul gsp rsp txt"
+    "nul bsp ysp txt" ;
+}
+
+.green-space {
+    height: 150px;
+    width: 150px;
+    border: 1px solid green;
+    background-color: green;
+    grid-area: gsp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;   
+}
+
+.red-space {
+    height: 150px;
+    width: 150px;
+    border: 1px solid red;
+    background-color: red;
+    grid-area: rsp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.blue-space {
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
+    background-color: blue;
+    grid-area: bsp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.yellow-space {
+    height: 150px;
+    width: 150px;
+    border: 1px solid yellow;
+    background-color: yellow;
+    grid-area: ysp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.start {
+    margin: 2% 0px 2% 30%;
+    font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.level-counter {
+    color: white;
+    text-align: center;
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.green-space-pressed {
+    height: 140px;
+    width: 140px;
+    border: 1px solid rgb(0, 178, 0);
+    background-color: rgb(0, 178, 0);
+    box-shadow: 0 5px 15px rgba(0, 178, 0, 1);
+    grid-area: gsp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;   
+}
+
+.red-space-pressed {
+    height: 140px;
+    width: 140px;
+    border: 1px solid rgb(255, 50, 50);
+    background-color: rgb(255, 50, 50);
+    box-shadow: 0 5px 15px rgba(255, 50, 50, 1);
+    grid-area: rsp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.blue-space-pressed {
+    height: 140px;
+    width: 140px;
+    border: 1px solid rgb(50, 50, 255);
+    background-color: rgb(50, 50, 255);
+    box-shadow: 0 5px 15px rgba(50, 50, 255, 1);
+    grid-area: bsp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.yellow-space-pressed {
+    height: 140px;
+    width: 140px;
+    border: 1px solid rgb(255, 255, 50);
+    background-color: rgb(255, 255, 50);
+    box-shadow: 0 5px 15px rgba(255, 255, 50, 1);
+    grid-area: ysp;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.loss {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("Images/amoguscoffin.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 150px;
+    z-index: 1;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}
+
+.win {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("Images/confetti.jpeg");
+    background-size: cover;
+    width: 500px;
+    height: 150px;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}

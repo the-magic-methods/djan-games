@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+body {
+  background-color: #030829;
+  pointer-events: ;
+}
+
+.gameTitle {
+  margin: auto;
+  height: 100px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: x-large;
+  font-style: italic;
+  color: whitesmoke;
+}
+
+.userMessage {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: larger;
+}
+
+.clicks {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#playButton {
+  margin: auto;
+  display: flex;
+  margin-top: 20px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: red;
+}
+
+#container {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 20 px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image div {
+  height: 170px;
+  border-radius: 1px;
+}
+
+.image {
+  position: relative;
+  cursor: grab;
+}
+
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid rgb(28, 28, 28);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  background-image: url("images/raceflag.bf86a2ab745f.png");
+  pointer-events: ""; 
+}
+
+img {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
